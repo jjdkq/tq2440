@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec arm-none-linux-gnueabi-gcc -march=armv4t $*
