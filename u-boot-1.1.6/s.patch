@@ -1,0 +1,79 @@
+92a93
+> 
+125a127
+> # define INTMOD     0X4A000004
+147a150
+> #if 0
+152a156
+> #endif
+160c164,177
+< 	bl	cpu_init_crit
+---
+> 	adr	r0, _start		/* r0 <- current position of code   */
+> 	ldr	r1, _TEXT_BASE		/* test if we run from flash or RAM */
+> 	cmp     r0, r1                  /* don't reloc during debug         */
+> 	blne	cpu_init_crit
+> #endif
+> 
+> 	/* Set up the stack						    */
+> stack_setup:
+> 	ldr	r0, _TEXT_BASE		/* upper 128 KiB: relocated uboot   */
+> 	sub	r0, r0, #CFG_MALLOC_LEN	/* malloc area                      */
+> 	sub	r0, r0, #CFG_GBL_DATA_SIZE /* bdinfo                        */
+> 
+> #ifdef CONFIG_USE_IRQ
+> 	sub	r0, r0, #(CONFIG_STACKSIZE_IRQ+CONFIG_STACKSIZE_FIQ)
+161a179,183
+> 	sub	sp, r0, #12		/* leave 3 words for abort-stack    */
+> 
+> #ifndef CONFIG_SKIP_LOWLEVEL_INIT
+>     bl clock_init
+> #endif    
+168,169c190,191
+< 	beq     stack_setup
+< 
+---
+> 	beq     clear_bss
+> 	
+172a195,197
+> #if 1
+> 	bl  CopyCode2Ram	/* r0: source, r1: dest, r2: size */
+> #else
+180,188d204
+< #endif	/* CONFIG_SKIP_RELOCATE_UBOOT */
+< 
+< 	/* Set up the stack						    */
+< stack_setup:
+< 	ldr	r0, _TEXT_BASE		/* upper 128 KiB: relocated uboot   */
+< 	sub	r0, r0, #CFG_MALLOC_LEN	/* malloc area                      */
+< 	sub	r0, r0, #CFG_GBL_DATA_SIZE /* bdinfo                        */
+< #ifdef CONFIG_USE_IRQ
+< 	sub	r0, r0, #(CONFIG_STACKSIZE_IRQ+CONFIG_STACKSIZE_FIQ)
+190c206
+< 	sub	sp, r0, #12		/* leave 3 words for abort-stack    */
+---
+> #endif	/* CONFIG_SKIP_RELOCATE_UBOOT */
+201a218
+> 
+402a420
+> 	.align	5
+405c423,424
+< 	.align	5
+---
+> 	    .align  5
+> 
+407,410c426,434
+< 	get_irq_stack
+< 	irq_save_user_regs
+< 	bl 	do_irq
+< 	irq_restore_user_regs
+---
+> /* add by www.100ask.net to use IRQ for USB and DMA */
+> 	sub	lr, lr, #4			        @ the return address
+> 	ldr	sp, IRQ_STACK_START	        @ the stack for irq
+> 	stmdb	sp!, 	{ r0-r12,lr }	@ save registers
+> 	
+> 	ldr	lr,	=int_return		        @ set the return addr
+> 	ldr	pc, =IRQ_Handle		        @ call the isr
+> int_return:
+> 	ldmia	sp!, 	{ r0-r12,pc }^	@ return from interrupt
