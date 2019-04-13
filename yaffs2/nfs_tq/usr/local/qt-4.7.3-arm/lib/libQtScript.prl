@@ -1,0 +1,7 @@
+QMAKE_PRL_BUILD_DIR = /home/zhoubo/desktop/qt-arm/qt-everywhere-opensource-src-4.7.3/./src/script
+QMAKE_PRO_INPUT = script.pro
+QMAKE_PRL_TARGET = libQtScript.so.4.7.3
+QMAKE_PRL_DEFINES = QT_SHARED
+QMAKE_PRL_CONFIG = lex yacc uic resources qt release incremental link_prl def_files_disabled no_mocdepend release stl qt_no_framework cross_compile release shared dll embedded stl exceptions_off dylib create_prl link_prl depend_includepath QTDIR_build qt_install_headers qt depend_includepath qmake_cache target_qt create_libtool create_pc explicitlib building-libs standalone_package depend_includepath moc thread shared dll
+QMAKE_PRL_VERSION = 4.7.3
+QMAKE_PRL_LIBS = -L/work/nfs_tq/usr/local/tslib/lib -L/home/zhoubo/desktop/qte-arm/lib  -lQtCore -L/work/nfs_tq/usr/local/tslib/lib -L/home/zhoubo/desktop/qte-arm/lib -lrt -lpthread 

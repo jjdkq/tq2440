@@ -1,0 +1,3 @@
+extra/hello.ko: extra/test.ko extra/test1.ko
+extra/test1.ko:
+extra/test.ko:
