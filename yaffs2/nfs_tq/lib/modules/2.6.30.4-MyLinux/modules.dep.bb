@@ -1,0 +1,2 @@
+extra/hello.ko hello
+

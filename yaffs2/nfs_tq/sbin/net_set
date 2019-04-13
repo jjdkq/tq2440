@@ -1,0 +1,80 @@
+#!/bin/sh
+
+echo Try to bring net interface up ...>/dev/console
+
+source /etc/nettype.conf
+if [ -f /etc/net.conf ] ; then
+	source /etc/net.conf
+
+	if [ $NETTYPE -eq 1 ] ; then
+	#有线网络
+		if [ $DHCP -eq 1 ] ; then
+		#dhcp set eth0
+			ifconfig eth0 down
+			ifconfig eth0 up
+			udhcpc -b -i eth0
+		else
+		#manual set eth0
+			ifconfig eth0 down
+			ifconfig eth0 hw ether $MAC
+			echo ifconfig eth0 hw ether $MAC >/dev/console
+			ifconfig eth0 $IPADDR netmask $NETMASK up
+			echo ifconfig eth0 $IPADDR netmask $NETMASK up >/dev/console
+			route add default gw $GATEWAY
+			echo add default gw $GATEWAY >/dev/console
+		fi
+	elif [ $NETTYPE -eq 2 ] ; then
+	#WEP加密方式
+		source /etc/wifi.conf
+		ifconfig eth0 down
+		ifconfig $INTERFACE down
+		iwconfig $INTERFACE essid "$NETNAME" key "$PASSWORD"
+		echo iwconfig $INTERFACE essid "$NETNAME" key "$PASSWORD" >/dev/console
+		if [ $DHCP -eq 1 ] ; then
+		#dhcp set $INTERFACE
+			ifconfig $INTERFACE up
+			udhcpc -b -i $INTERFACE
+		else
+		#manual set $INTERFACE
+			ifconfig $INTERFACE $IPADDR netmask $NETMASK up
+			echo ifconfig $INTERFACE $IPADDR netmask $NETMASK up >/dev/console
+			route add default gw $GATEWAY
+			echo route add default gw $GATEWAY >/dev/console
+		fi
+	elif [ $NETTYPE -eq 3 ] ; then
+	#WPA/TKIP加密方式
+		source /etc/wifi.conf
+		ifconfig eth0 down
+		ifconfig $INTERFACE down
+		ifconfig $INTERFACE up
+		ifconfig $INTERFACE down
+		ifconfig $INTERFACE up
+		wpa_supplicant -Dwext -B -i$INTERFACE -c/etc/wpa_supplicant.conf && 
+		echo wpa_supplicant -B -i$INTERFACE -c/etc/wpa_supplicant.conf >/dev/console
+#		wpa_cli -i$INTERFACE add_network
+#		echo wpa_cli -i$INTERFACE add_network >/dev/console
+#		wpa_cli -i$INTERFACE enable_network 0
+#		echo wpa_cli -i$INTERFACE enable_network 0 >/dev/console
+		if [ $DHCP -eq 1 ] ; then
+		#dhcp set $INTERFACE
+			ifconfig $INTERFACE up
+			udhcpc -b -i $INTERFACE
+		else
+		#manual set $INTERFACE
+			ifconfig $INTERFACE $IPADDR netmask $NETMASK up
+			echo ifconfig $INTERFACE $IPADDR netmask $NETMASK up >/dev/console
+			route add default gw $GATEWAY
+			echo route add default gw $GATEWAY >/dev/console
+		fi
+	fi
+else
+
+	ifconfig eth0 hw ether 10:23:45:67:89:ab
+	ifconfig eth0 192.168.1.6 netmask 255.255.255.0 up
+	route add default gw 192.168.1.2
+	echo ifconfig eth0 hw ether 10:23:45:67:89:ab >/dev/console
+	echo ifconfig eth0 192.168.1.6 netmask 255.255.255.0 up >/dev/console
+	echo route add default gw 192.168.1.2 >/dev/console
+fi
+
+echo Done > /dev/console
