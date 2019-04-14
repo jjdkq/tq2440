@@ -1,0 +1,1 @@
+cmd_/home/zhoubo/desktop/driver/spi_software/myx5045.ko := arm-linux-ld -EL -r   --build-id -o /home/zhoubo/desktop/driver/spi_software/myx5045.ko /home/zhoubo/desktop/driver/spi_software/myx5045.o /home/zhoubo/desktop/driver/spi_software/myx5045.mod.o

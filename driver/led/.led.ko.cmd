@@ -1,0 +1,1 @@
+cmd_/home/zhoubo/desktop/Linux内核移植/tq2440/linux-2.6.30.4/mydriver/char/led/led.ko := arm-linux-ld -EL -r   --build-id -o /home/zhoubo/desktop/Linux内核移植/tq2440/linux-2.6.30.4/mydriver/char/led/led.ko /home/zhoubo/desktop/Linux内核移植/tq2440/linux-2.6.30.4/mydriver/char/led/led.o /home/zhoubo/desktop/Linux内核移植/tq2440/linux-2.6.30.4/mydriver/char/led/led.mod.o

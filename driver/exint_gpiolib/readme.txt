@@ -1,0 +1,1 @@
+通过input子系统和gpiolib的api来写外部中断驱动

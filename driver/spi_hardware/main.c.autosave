@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void)
+{
+    printf("Hello World!\n");
+    return 0;
+}
+
+ { "w25q64", 0xef4017, 0, 64 * 1024, 128, SECT_4K, },    //for w25q64
