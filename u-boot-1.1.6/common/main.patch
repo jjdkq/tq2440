@@ -1,0 +1,55 @@
+259a260
+> # ifdef CONFIG_MENUKEY
+262d262
+< # ifdef CONFIG_MENUKEY
+263a264
+> 				break;
+265c266,271
+< 				(void) getc();  /* consume input	*/
+---
+> 				/* consume input	*/
+> 				if (getc() == ' ') {
+> 					abort  = 1; /* don't auto boot	*/
+> 					bootdelay = 0;	/* no more delay	*/
+> 					break;
+> 				}
+267c273
+< 				break;
+---
+> 
+365a372,383
+> #ifdef CONFIG_JFFS2_CMDLINE
+>     extern int mtdparts_init(void);
+>     if (!getenv("mtdparts"))
+>     {
+>         run_command("mtdparts default", 0);
+>     }
+>     else
+>     {
+>         mtdparts_init();
+>     }
+> #endif
+> 
+394a413,423
+> 	if (PreLoadedONRAM)	{
+> 		printf("Use these steps to program the image to flash:\n");
+> 		printf("1. In OpenOCD\n");
+> 		printf("   Run the 'halt' command to halt u-boot\n");
+> 		printf("   Run the 'load_image <file> <address>' command to load file to SDRAM\n");
+> 		printf("   Run the 'resume' command to resume u-boot\n");
+> 		printf("2. In u-boot, use the flash commands to program the image to flash\n");
+> 		printf("Or, use the tftp or nfs command to download file, and then program the flash.\n");
+> 		goto PROMPT;
+> 	}
+> 
+413c442,445
+< 		run_command (s, 0);
+---
+>         {
+>             printf("Booting Linux ...\n");            
+>     	    run_command (s, 0);
+>         }
+445a478
+>     run_command("menu", 0);
+448a482
+> PROMPT:

@@ -1,0 +1,10 @@
+prefix=/work/nfs_tq/usr/local/tslib
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: tslib
+Description: Touchscreen Access Library
+Version: 1.4
+Libs: -L${libdir} -lts
+Cflags: -I${includedir}

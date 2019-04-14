@@ -1,0 +1,12 @@
+version=4.2.2
+prefix=/opt/EmbedSky/4.3.3/arm-none-linux-gnueabi/libc/armv4t/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: WvStreams Base
+Description: Basic subset of the WvStreams library
+Version: ${version}
+Requires: wvxplc
+Libs: -L${libdir} -lwvbase
+Cflags: -I${includedir}/wvstreams

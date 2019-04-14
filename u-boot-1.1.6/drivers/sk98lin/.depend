@@ -1,0 +1,87 @@
+skge.o: skge.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skaddr.o: skaddr.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skgehwt.o: skgehwt.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skgeinit.o: skgeinit.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skgepnmi.o: skgepnmi.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skgesirq.o: skgesirq.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+ski2c.o: ski2c.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+sklm80.o: sklm80.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skqueue.o: skqueue.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skrlmt.o: skrlmt.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+sktimer.o: sktimer.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skvpd.o: skvpd.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skxmac2.o: skxmac2.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+skcsum.o: skcsum.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+uboot_skb.o: uboot_skb.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h
+uboot_drv.o: uboot_drv.c \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/common.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/configs/tq24x0.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/cmd_confdefs.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/linux/bitops.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/bitops.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/linux/types.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/linux/config.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/linux/posix_types.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/linux/stddef.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/posix_types.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/types.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/linux/string.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/image.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/u-boot.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/global_data.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/mach-types.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/setup.h \
+  /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/u-boot-arm.h
