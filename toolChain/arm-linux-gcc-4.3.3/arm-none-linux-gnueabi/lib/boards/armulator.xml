@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE board SYSTEM "board.dtd">
+<!-- Description for ARMulator (RDI)
+
+     Version:Sourcery G++ Lite 2009q1-176
+     BugURL:https://support.codesourcery.com/GNUToolchain/
+
+     Copyright 2007, 2008 CodeSourcery, Inc.
+
+     THIS FILE CONTAINS PROPRIETARY, CONFIDENTIAL, AND TRADE SECRET
+     INFORMATION OF CODESOURCERY AND/OR ITS LICENSORS.
+
+     You may not use or distribute this file without the express written
+     permission of CodeSourcery or its authorized distributor.  This file is
+     licensed only for use with Sourcery G++.  No other use is permitted.
+     -->
+<board>
+  <memory-map>
+    <memory-device address="0x0" size="128M" type="ram">
+      <description>
+        ram
+      </description>
+    </memory-device>
+  </memory-map>
+</board>
