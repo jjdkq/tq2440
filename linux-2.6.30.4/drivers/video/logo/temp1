@@ -1,0 +1,23 @@
+#
+# Logo configuration
+#
+
+menuconfig LOGO
+	tristate "Bootup logo"
+	depends on FB || SGI_NEWPORT_CONSOLE
+	help
+	  Enable and select frame buffer bootup logos.
+
+if LOGO
+
+
+
+#for tq2440
+config LOGO_LINUX_TFT480272_CLUT224
+	tristate "Standard 224-color Linux logo for 480X272"
+#	depends on LOGO  
+	default y
+
+
+
+endif # LOGO
