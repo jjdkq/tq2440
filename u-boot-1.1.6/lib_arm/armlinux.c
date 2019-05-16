@@ -85,11 +85,7 @@ void do_bootm_linux (cmd_tbl_t *cmdtp, int flag, int argc, char *argv[],
 	void (*theKernel)(int zero, int arch, uint params);
 	image_header_t *hdr = &header;
 	bd_t *bd = gd->bd;
-<<<<<<< HEAD
 	uint of_flat_tree = 0;			//for tq2440 dtb
-
-=======
->>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 
 #ifdef CONFIG_CMDLINE_TAG
 	char *commandline = getenv ("bootargs");
@@ -97,7 +93,6 @@ void do_bootm_linux (cmd_tbl_t *cmdtp, int flag, int argc, char *argv[],
 
 	theKernel = (void (*)(int, int, uint))ntohl(hdr->ih_ep);
 
-<<<<<<< HEAD
 	//for tq2440 dtb
 #define OF_DT_HEADER 0xd00dfeed
 	if (argc == 4) {
@@ -115,8 +110,6 @@ void do_bootm_linux (cmd_tbl_t *cmdtp, int flag, int argc, char *argv[],
         
     }
 
-=======
->>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 	/*
 	 * Check if there is an initrd image
 	 */
@@ -293,10 +286,6 @@ void do_bootm_linux (cmd_tbl_t *cmdtp, int flag, int argc, char *argv[],
 	cleanup_before_linux ();
 
 	theKernel (0, bd->bi_arch_number, bd->bi_boot_params);
-<<<<<<< HEAD
-
-=======
->>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 }
 
 
