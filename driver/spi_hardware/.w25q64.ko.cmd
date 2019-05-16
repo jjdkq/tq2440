@@ -1,0 +1,1 @@
+cmd_/home/zhoubo/desktop/driver/spi_hardware/w25q64.ko := arm-linux-ld -EL -r   --build-id -o /home/zhoubo/desktop/driver/spi_hardware/w25q64.ko /home/zhoubo/desktop/driver/spi_hardware/w25q64.o /home/zhoubo/desktop/driver/spi_hardware/w25q64.mod.o

@@ -1,0 +1,23 @@
+.TH "TS_CALIBRATE" "1" "" "" "tslib"
+.SH "NAME"
+ts_calibrate \- A test program to calibrate a touch screen used by tslib\&.
+
+.SH SYNOPSIS
+.B ts_calibrate
+
+.SH "DESCRIPTION"
+.PP
+\fBts_calibrate\fR is used to manually configure tslib's \fBlinear\fR filter plugin. It draws crosshairs to the framebuffer to be touched by the user and records expected vs. actual touch contact positions needed to apply the filter and provide a desired touch user experience. It uses the \fBTSLIB_CALIBFILE\fR environment variable to store it's values.
+.PP
+
+.SH "ENVIRONMENT VARIABLES"
+.PP
+see ts.conf (5)
+.RE
+.PP
+
+.SH "SEE ALSO"
+.PP
+ts\&.conf (5),
+ts_test (1),
+ts_uinput (1)

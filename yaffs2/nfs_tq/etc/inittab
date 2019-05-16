@@ -1,0 +1,9 @@
+# /etc/inittab
+::sysinit:/etc/init.d/rcS			#系统启动后最先执行的进程
+#使用tq2440_serial0(串口0)这个设备作为控制台,启动shell
+tq2440_serial0::askfirst:-/bin/sh	
+#使用虚拟终端1(LCD)作为控制台,此时开发板需要外接键盘
+tty1::askfirst:-/bin/sh	
+::ctrlaltdel:/sbin/reboot			#按下Ctrl+Alt+Del后重启系统
+::shutdown:/bin/umount -a -r		#系统关机后卸载设备文件
+

@@ -52,6 +52,7 @@
 
 #define CONFIG_JFFS2_CMDLINE 1
 #define CONFIG_JFFS2_NAND    1
+<<<<<<< HEAD
 #define MTDIDS_DEFAULT "nand0=nandflash0"
 
 //for tq2440 支持设备树
@@ -69,6 +70,17 @@
 							"-(root)"
 #endif
 
+=======
+
+#define MTDIDS_DEFAULT "nand0=nandflash0"
+#define MTDPARTS_DEFAULT "mtdparts=nandflash0:256k@0(bootloader)," \
+                            "128k(params)," \
+							"128k(toc)," \
+							"512k(eboot),"\
+							"1024k(logo),"\
+                            "3m(kernel)," \
+                            "-(root)"
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 
 /*
  * Size of malloc() pool
@@ -135,16 +147,22 @@
 /* this must be included AFTER the definition of CONFIG_COMMANDS (if any) */
 #include <cmd_confdefs.h>
 
+<<<<<<< HEAD
 
 #define CONFIG_BOOTDELAY	2
 #ifndef CONFIGURE_DTB					//不支持设备树时通过uboot传递启动参数(支持设备树时通过设备树传递启动参数)
 #define CONFIG_BOOTARGS    	"noinitrd root=/dev/mtdblock2 init=/linuxrc console=ttySAC0 rootfstype=yaffs"
 #endif
+=======
+#define CONFIG_BOOTDELAY	2
+#define CONFIG_BOOTARGS    	"noinitrd root=/dev/mtdblock2 init=/linuxrc console=ttySAC0 rootfstype=yaffs"
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 #define CONFIG_ETHADDR	    08:00:3e:26:0a:5b
 #define CONFIG_NETMASK      255.255.255.0
 #define CONFIG_IPADDR		192.168.1.6
 #define CONFIG_SERVERIP		192.168.1.8
 /*#define CONFIG_BOOTFILE	"elinos-lart" */
+<<<<<<< HEAD
 
 //for tq2440 device tree 
 #ifdef CONFIGURE_DTB					//支持设备树
@@ -153,6 +171,9 @@
 #define CONFIG_BOOTCOMMAND	"nand read.jffs2 0x30007FC0 kernel; bootm 0x30007FC0"
 #endif
 //#define CONFIG_BOOTCOMMAND	"nand read.jffs2 0x30000000 kernel; bootm 0x30000000"
+=======
+#define CONFIG_BOOTCOMMAND	"nand read.jffs2 0x30000000 kernel; bootm 0x30000000"
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 
 #if (CONFIG_COMMANDS & CFG_CMD_KGDB)
 #define CONFIG_KGDB_BAUDRATE	115200		/* speed to run kgdb serial port */

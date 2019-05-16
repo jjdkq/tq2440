@@ -1,0 +1,75 @@
+#include <linux/module.h>
+#include <linux/version.h>
+
+#include <linux/init.h>
+
+#include <linux/kernel.h>
+#include <linux/types.h>
+#include <linux/interrupt.h>
+#include <linux/list.h>
+#include <linux/timer.h>
+#include <linux/init.h>
+#include <linux/serial_core.h>
+#include <linux/platform_device.h>
+#include <linux/i2c.h>
+
+/* i2c资源　*/
+static struct resource myi2c_res[] = 
+{
+    [0] = 
+    {
+        .start = 0x56000040,                    //gpecon的物理地址
+        .end = 0x56000040 + 12 - 1,             //gpecon,gpedat,gpeup
+        .flags = IORESOURCE_MEM,
+    },
+    [1] =
+    {
+        .start = 14,                            //gpe14
+        .end = 14,
+        .flags = IORESOURCE_IRQ,
+    },
+    [2] =
+    {
+        .start = 15,                            //gpe15
+        .end = 15,
+        .flags = IORESOURCE_IRQ,
+    },
+    [3] = 
+    {
+        .start = 0x54000000,                    //i2ccon的物理地址
+        .end = 0x54000000 + 20 - 1,             //i2ccon,i2cstat,i2cadd,i2cds,i2cls
+    },
+};
+
+static void myi2c_release(struct device *dev) { }
+
+static struct platform_device myi2c_dev = 
+{
+    .name = "myi2c",
+    .id = -1,
+    .resource = myi2c_res,
+    .num_resource = ARRAY_SIZE(myi2c_res),
+    .dev = 
+    {
+        .release = myi2c_release,
+    }
+};
+
+static int __init myi2c_dev_init(void)
+{
+    return platform_device_register(&myi2c_dev);
+}
+
+static void __exit myi2c_dev_exit(void)
+{
+    platform_dei
+}
+
+module_init(I2C_bmp180_init);
+module_exit(I2C_bmp180_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("zhoubo");
+MODULE_DESCRIPTION("A bmp180 Module for testing module ");
+MODULE_VERSION("V1.0");
+

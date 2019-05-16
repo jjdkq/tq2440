@@ -1,0 +1,24 @@
+.TH "TS_PRINT" "1" "" "" "tslib"
+.SH "NAME"
+ts_print, ts_print_raw \- A very basic test routine for tslib\&.
+
+.SH SYNOPSIS
+.B ts_print
+.sp
+.B ts_print_raw
+
+.SH "DESCRIPTION"
+.PP
+ts_print simply reads tslib input samples and prints them to the console. With
+.BR ts_print
+, the configured filters are applied, see ts.conf (5). With
+.BR ts_print_raw
+, no filters are applied.
+.sp
+It supports single touch only.
+.SH "SEE ALSO"
+.PP
+ts.conf (5),
+ts_test (1),
+ts_test_mt (1),
+ts_calibrate (1)

@@ -3,10 +3,15 @@
 #include <command.h>
 #include <nand.h>
 
+<<<<<<< HEAD
 #ifndef CONFIGURE_DTB
 extern char console_buffer[];
 extern int readline (const char *const prompt);
 #endif
+=======
+extern char console_buffer[];
+extern int readline (const char *const prompt);
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 
 extern char awaitkey(unsigned long delay, int* error_p);
 //extern void download_nkbin_to_flash(void);
@@ -40,6 +45,7 @@ void main_menu_usage(void)
     printf("\r\n#############  My Uboot Menu  #############\r\n");
 
     printf("[b] Boot the system\r\n");
+<<<<<<< HEAD
 #ifdef CONFIGURE_DTB						//支持设备树
     printf("[d] Download device tree(s3c2440-tq2440.dtb) to Nand Flash by tftp\r\n");
 #endif 
@@ -53,11 +59,20 @@ void main_menu_usage(void)
 #else
 	printf("[u] Download bootloader(u-boot-nodtb.bin) to Nand Flash by tftp\r\n");
 #endif
+=======
+    printf("[e] Erase the Nand Flash\r\n");
+    printf("[f] Download file system(root.bin) to Nand Flash by tftp\r\n");
+    printf("[k] Download linux kernel(uImage) to Nand Flash by tftp\r\n");
+    printf("[u] Download bootloader(u-boot.bin) to Nand Flash by tftp\r\n");
+    printf("[n] Boot the system from nfs file system\r\n");
+    printf("[y] Boot the system from yaffs file system\r\n");
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
     printf("[q] Quit from menu\r\n");
 
     printf("Enter your selection: ");
 }
 
+<<<<<<< HEAD
 void myboot(void)
 {
     char cmd_buf[200];
@@ -71,16 +86,22 @@ void myboot(void)
 #endif
 	run_command(cmd_buf, 0); 
 }
+=======
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 
 void menu_shell(void)
 {
     char c;
     char cmd_buf[200];
+<<<<<<< HEAD
 #ifdef CONFIGURE_DTB
 	char param_buf[64] = "u-boot-nodtb.bin";
 #else
 	char param_buf[64] = "u-boot.bin";
 #endif
+=======
+	char param_buf[64];
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
     while (1)
     {
         main_menu_usage();
@@ -91,6 +112,7 @@ void menu_shell(void)
 			case 'b':
 				sprintf(cmd_buf, "ping 192.168.1.8");
 				run_command(cmd_buf,0);
+<<<<<<< HEAD
 				myboot();
 				break;
 #ifdef CONFIGURE_DTB						//支持设备树
@@ -99,6 +121,13 @@ void menu_shell(void)
 				run_command(cmd_buf,0);
 				break;
 #endif
+=======
+
+				printf("Booting Linux ...\n");
+	strcpy(cmd_buf, "nand read.jffs2 0x30000000 kernel;bootm 0x30000000");
+				run_command(cmd_buf, 0); 
+				break;
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
             case 'k':
                 strcpy(cmd_buf, "tftp 0x30000000 uImage;nand erase kernel;nand write.jffs2 0x30000000 kernel $(filesize)");
                 run_command(cmd_buf, 0);
@@ -111,7 +140,10 @@ void menu_shell(void)
 				strcpy(cmd_buf,"tftp 0x30000000 root.bin;nand erase root;nand write.yaffs 0x30000000 root $(filesize);");
 				run_command(cmd_buf,0);
 				break;
+<<<<<<< HEAD
 #ifndef CONFIGURE_DTB
+=======
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 			case 'n':		
 				sprintf(cmd_buf, "ping 192.168.1.8");
 				run_command(cmd_buf,0);
@@ -120,24 +152,43 @@ void menu_shell(void)
 
 				printf("Enter nfs directory:\n");
 				readline(NULL);
+<<<<<<< HEAD
 				strcpy(param_buf, console_buffer);
+=======
+				strcpy(param_buf,console_buffer);
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 				sprintf(cmd_buf, "setenv bootargs console=ttySAC0 console=tty1 root=/dev/nfs nfsroot=192.168.1.8:%s ip=192.168.1.6:192.168.1.8:192.168.1.6:255.255.255.0:SKY2440.embedsky.net:eth0:off",param_buf);
 
 				run_command(cmd_buf, 0);
 				sprintf(cmd_buf,"saveenv");
 				run_command(cmd_buf,0);
+<<<<<<< HEAD
 				myboot();
+=======
+				printf("Booting Linux ...\n");
+	strcpy(cmd_buf, "nand read.jffs2 0x30000000 kernel;bootm 0x30000000");
+				run_command(cmd_buf, 0); 
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
 				break;
 			case 'y':
 				strcpy(cmd_buf,"setenv bootargs noinitrd root=/dev/mtdblock2 init=/linuxrc console=ttySAC0");
 				run_command(cmd_buf,0);
 				sprintf(cmd_buf,"saveenv");
 				run_command(cmd_buf,0);
+<<<<<<< HEAD
 				myboot();
 				break;
 #endif
             case 'u':
                 sprintf(cmd_buf, "tftp 0x30000000 %s;nand erase bootloader;nand erase params;nand write.jffs2 0x30000000 bootloader $(filesize)", param_buf);
+=======
+				printf("Booting Linux ...\n");
+	strcpy(cmd_buf, "nand read.jffs2 0x30000000 kernel;bootm 0x30000000");
+				run_command(cmd_buf, 0); 
+				break;
+            case 'u':
+                strcpy(cmd_buf, "tftp 0x30000000 u-boot.bin;nand erase bootloader;nand write.jffs2 0x30000000 bootloader $(filesize)");
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
                 run_command(cmd_buf, 0);
                 break;
             case 'q':

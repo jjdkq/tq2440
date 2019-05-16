@@ -19,7 +19,11 @@ cache.o: cache.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -46,7 +50,11 @@ codec.o: codec.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -73,7 +81,11 @@ cpu.o: cpu.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -100,7 +112,11 @@ dsp.o: dsp.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -127,7 +143,11 @@ ether.o: ether.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -154,7 +174,11 @@ i2c.o: i2c.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -181,7 +205,11 @@ memory.o: memory.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -208,7 +236,11 @@ post.o: post.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -240,7 +272,11 @@ rtc.o: rtc.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -267,7 +303,11 @@ spr.o: spr.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -295,7 +335,11 @@ sysmon.o: sysmon.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -322,7 +366,11 @@ tests.o: tests.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -349,7 +397,11 @@ uart.o: uart.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -376,7 +428,11 @@ usb.o: usb.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
@@ -403,7 +459,11 @@ watchdog.o: watchdog.c \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/string.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/ptrace.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/asm/proc/ptrace.h \
+<<<<<<< HEAD
   /work/tools/gcc-3.4.5-glibc-2.3.6/bin/../lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+=======
+  /work/tools/gcc-3.4.5-glibc-2.3.6/lib/gcc/arm-linux/3.4.5/include/stdarg.h \
+>>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/part.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/ide.h \
   /home/zhoubo/desktop/U-Boot移植/u-boot-1.1.6/include/flash.h \
