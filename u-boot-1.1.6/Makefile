@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-    
-=======
->>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
+
 #
 # (C) Copyright 2000-2006
 # Wolfgang Denk, DENX Software Engineering, wd@denx.de.
@@ -2316,8 +2313,4 @@ backup:
 	gtar --force-local -zcvf `date "+$$F-%Y-%m-%d-%T.tar.gz"` $$F
 
 #########################################################################
-<<<<<<< HEAD
 
-
-=======
->>>>>>> f58992efa14c81d10fd340c82b6ad41b2883bbd1
