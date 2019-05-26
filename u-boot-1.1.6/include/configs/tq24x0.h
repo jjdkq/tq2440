@@ -169,9 +169,6 @@
 #define CONFIG_BOOTCOMMAND	"nand read.jffs2 0x30007FC0 kernel; bootm 0x30007FC0"
 #endif
 //#define CONFIG_BOOTCOMMAND	"nand read.jffs2 0x30000000 kernel; bootm 0x30000000"
-=======
-#define CONFIG_BOOTCOMMAND	"nand read.jffs2 0x30000000 kernel; bootm 0x30000000"
-
 
 #if (CONFIG_COMMANDS & CFG_CMD_KGDB)
 #define CONFIG_KGDB_BAUDRATE	115200		/* speed to run kgdb serial port */
