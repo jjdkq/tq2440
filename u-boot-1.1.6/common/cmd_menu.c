@@ -153,8 +153,8 @@ void menu_shell(void)
 #endif
             case 'u':
                 sprintf(cmd_buf, "tftp 0x30000000 %s;nand erase bootloader;nand erase params;nand write.jffs2 0x30000000 bootloader $(filesize)", param_buf);
-				printf("Booting Linux ...\n");
-	strcpy(cmd_buf, "nand read.jffs2 0x30000000 kernel;bootm 0x30000000");
+				//printf("Booting Linux ...\n");
+	//strcpy(cmd_buf, "nand read.jffs2 0x30000000 kernel;bootm 0x30000000");
 				run_command(cmd_buf, 0); 
 				break;
             case 'q':
