@@ -151,9 +151,6 @@
 #ifndef CONFIGURE_DTB					//不支持设备树时通过uboot传递启动参数(支持设备树时通过设备树传递启动参数)
 #define CONFIG_BOOTARGS    	"noinitrd root=/dev/mtdblock2 init=/linuxrc console=ttySAC0 rootfstype=yaffs"
 #endif
-=======
-#define CONFIG_BOOTDELAY	2
-#define CONFIG_BOOTARGS    	"noinitrd root=/dev/mtdblock2 init=/linuxrc console=ttySAC0 rootfstype=yaffs"
 
 #define CONFIG_ETHADDR	    08:00:3e:26:0a:5b
 #define CONFIG_NETMASK      255.255.255.0
