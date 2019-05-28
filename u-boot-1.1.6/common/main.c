@@ -449,7 +449,6 @@ void main_loop (void)
 #ifdef CONFIGURE_DTB						//支持设备树
 			run_command("tftp 0x30000000 s3c2440-tq2440.dtb;nand erase device_tree;nand write.jffs2 0x30000000 device_tree $(filesize)", 0);
 #endif
-			run_command("ping 192.168.1.8",0);
     	    run_command (s, 0);
         }
 # else
