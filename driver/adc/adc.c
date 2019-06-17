@@ -19,7 +19,7 @@
 #include <linux/wait.h>
 #include <linux/clk.h>
 
-#define DEVICE_NAME		"adc"
+#define DEVICE_NAME		"myadc"		//这里不能用"adc",因为触屏驱动要用到ADC中断，而内核的ADC驱动的设备名是"adc"
 #define PCLK			50000000
 #define ADCCLK			2500000
 typedef struct
