@@ -1,0 +1,56 @@
+/*
+ * SAMSUNG SMDK2440 board device tree source
+ *
+ * Copyright (c) 2018 weidongshan@qq.com
+ * dtc -I dtb -O dts -o jz2440.dts jz2440.dtb
+ */
+
+#define S3C2410_GPA(_nr)	((0<<16) + (_nr))
+#define S3C2410_GPB(_nr)	((1<<16) + (_nr))
+#define S3C2410_GPC(_nr)	((2<<16) + (_nr))
+#define S3C2410_GPD(_nr)	((3<<16) + (_nr))
+#define S3C2410_GPE(_nr)	((4<<16) + (_nr))
+#define S3C2410_GPF(_nr)	((5<<16) + (_nr))
+#define S3C2410_GPG(_nr)	((6<<16) + (_nr))
+#define S3C2410_GPH(_nr)	((7<<16) + (_nr))
+#define S3C2410_GPJ(_nr)	((8<<16) + (_nr))
+#define S3C2410_GPK(_nr)	((9<<16) + (_nr))
+#define S3C2410_GPL(_nr)	((10<<16) + (_nr))
+#define S3C2410_GPM(_nr)	((11<<16) + (_nr))
+
+/dts-v1/;
+//#include "led.dtsi"			//#include要放在/dts-v1/后面
+
+/ {
+	model = "SMDK24440";
+	compatible = "samsung,smdk2440";
+
+	#address-cells = <1>;
+	#size-cells = <1>;
+		
+	memory@30000000 {
+		device_type = "memory";
+		reg =  <0x30000000 0x4000000>;
+	};
+/*
+	cpus {
+		cpu {
+			compatible = "arm,arm926ej-s";
+		};
+	};
+*/	
+	chosen {
+//		bootargs = "noinitrd root=/dev/mtdblock2 rw init=/linuxrc console=ttySAC0,115200";
+		//for tq2440
+		bootargs = "console=ttySAC0 root=/dev/nfs nfsroot=192.168.1.8:/work/nfs_4.19-rc3 ip=192.168.1.6:192.168.1.8:192.168.1.6:255.255.255.0:SKY2440.embedsky.net:eth0:off";
+	};
+
+	leds {
+		compatible = "myled";
+		reg = <0x56000010 8>;
+		pin = <5 6 7 8>;
+	};
+
+	// 或者在/dts-v1/的后一句包含"led.dtsi"
+};
+

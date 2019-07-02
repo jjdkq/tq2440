@@ -1,0 +1,21 @@
+
+
+/ {
+	myled: gpio {
+		compatible = "myled";
+		reg = <0x56000010 8>;		   
+		pin = <1 2 3 4>;
+	};
+};
+
+/*
+/ {
+	GPIOB: GPIOB@56000010 {
+		compatible = "gpiob register";
+		reg = <0x56000010 8>;
+		pin-array = <5 6 7 8>;
+		#gpio-cells = <2>;		//用来描述gpio使用节点的属性一个cell的内容，即:属性 = <&引用GPIO节点别名 GPIO标号 工作模式>
+	};
+};
+*/
+

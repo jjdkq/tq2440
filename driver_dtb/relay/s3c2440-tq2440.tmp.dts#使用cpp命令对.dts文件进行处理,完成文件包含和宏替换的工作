@@ -1,0 +1,38 @@
+# 1 "s3c2440-tq2440.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "s3c2440-tq2440.dts"
+# 21 "s3c2440-tq2440.dts"
+/dts-v1/;
+
+/ {
+ model = "SMDK24440";
+ compatible = "samsung,smdk2440";
+
+ #address-cells = <1>;
+ #size-cells = <1>;
+
+ memory@30000000 {
+  device_type = "memory";
+  reg = <0x30000000 0x4000000>;
+ };
+
+
+
+
+
+
+
+ chosen {
+
+
+  bootargs = "console=ttySAC0 root=/dev/nfs nfsroot=192.168.1.8:/work/nfs_4.19-rc3 ip=192.168.1.6:192.168.1.8:192.168.1.6:255.255.255.0:SKY2440.embedsky.net:eth0:off";
+ };
+
+
+ led {
+  compatible = "myled";
+  reg = <0x56000010 8>;
+  pin = <7>;
+ };
+};
