@@ -1,0 +1,3 @@
+kernel//home/zhoubo/desktop/driver/myi2c_irq/bmp180.ko
+kernel//home/zhoubo/desktop/driver/myi2c_irq/myi2c_drv.ko
+kernel//home/zhoubo/desktop/driver/myi2c_irq/myi2c_dev.ko

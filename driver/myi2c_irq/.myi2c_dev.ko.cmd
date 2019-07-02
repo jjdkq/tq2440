@@ -1,0 +1,1 @@
+cmd_/home/zhoubo/desktop/driver/myi2c_irq/myi2c_dev.ko := arm-linux-ld -EL -r   --build-id -o /home/zhoubo/desktop/driver/myi2c_irq/myi2c_dev.ko /home/zhoubo/desktop/driver/myi2c_irq/myi2c_dev.o /home/zhoubo/desktop/driver/myi2c_irq/myi2c_dev.mod.o

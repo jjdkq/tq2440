@@ -1,0 +1,1 @@
+cmd_/home/zhoubo/desktop/driver/myi2c_irq/bmp180.ko := arm-linux-ld -EL -r   --build-id -o /home/zhoubo/desktop/driver/myi2c_irq/bmp180.ko /home/zhoubo/desktop/driver/myi2c_irq/bmp180.o /home/zhoubo/desktop/driver/myi2c_irq/bmp180.mod.o
