@@ -1,0 +1,33 @@
+#!/bin/sh
+
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+runlevel=S
+prevlevel=N
+umask 022
+export PATH runlevel prevlevel
+
+#
+#	Trap CTRL-C &c only in this shell so we can interrupt subprocesses.
+#
+
+mount -a					#此时会挂载/work/nfs_tq/etc/fstab中的文件系统
+mkdir -p /dev/pts
+mount -t devpts devpts /dev/pts
+mount -n -t usbfs none /proc/bus/usb
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s						#在/work/nfs_tq/dev目录下生成内核支持的所有设备的节点
+mkdir -p /var/lock
+
+#insmod /driver/led.ko
+#mknod /dev/led c 231 0
+#leds
+#/etc/rc.d/init.d/led.sh start 				#后台运行让led程序自启动的脚本
+
+/etc/rc.d/init.d/gps.sh start 				#后台运行让led程序自启动的脚本
+ifconfig lo 127.0.0.1
+net_set&
+
+hwclock -s					#系统同步rtc
+
+/bin/hostname -F /etc/sysconfig/HOSTNAME

@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>设置wemcam结果</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #666666;
+}
+-->
+</style>
+</head>
+<body>
+<p>WEBCAM设置已经提交</p>
+<p><a href="webcam.html">返回上一页</a></p>
+</body>
+</html>
